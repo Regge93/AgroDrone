@@ -1,0 +1,16 @@
+c:\users\alex\documents\visual studio 2013\Projects\EspectralImages\EspectralImages\bin\Debug\EspectralImages.exe.config
+c:\users\alex\documents\visual studio 2013\Projects\EspectralImages\EspectralImages\bin\Debug\EspectralImages.exe
+c:\users\alex\documents\visual studio 2013\Projects\EspectralImages\EspectralImages\bin\Debug\EspectralImages.pdb
+c:\users\alex\documents\visual studio 2013\Projects\EspectralImages\EspectralImages\bin\Debug\EspectralImages.xml
+c:\users\alex\documents\visual studio 2013\Projects\EspectralImages\EspectralImages\obj\Debug\EspectralImages.Form1.resources
+c:\users\alex\documents\visual studio 2013\Projects\EspectralImages\EspectralImages\obj\Debug\EspectralImages.Resources.resources
+c:\users\alex\documents\visual studio 2013\Projects\EspectralImages\EspectralImages\obj\Debug\EspectralImages.vbproj.GenerateResource.Cache
+c:\users\alex\documents\visual studio 2013\Projects\EspectralImages\EspectralImages\obj\Debug\EspectralImages.exe
+c:\users\alex\documents\visual studio 2013\Projects\EspectralImages\EspectralImages\obj\Debug\EspectralImages.xml
+c:\users\alex\documents\visual studio 2013\Projects\EspectralImages\EspectralImages\obj\Debug\EspectralImages.pdb
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\EspectralImages\EspectralImages\bin\Debug\GMap.NET.Core.dll
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\EspectralImages\EspectralImages\obj\Debug\EspectralImages.vbprojResolveAssemblyReference.cache
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\EspectralImages\EspectralImages\bin\Debug\GMap.NET.WindowsForms.dll
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\EspectralImages\EspectralImages\obj\Debug\EspectralImages.Imagenes.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\EspectralImages\EspectralImages\obj\Debug\EspectralImages.AgroDrone.resources
+C:\Users\Alex\Documents\Visual Studio 2013\Projects\EspectralImages\EspectralImages\obj\Debug\EspectralImages.TablaImages.resources
