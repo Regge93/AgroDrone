@@ -23,9 +23,6 @@ Partial Class AgroDrone
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AgroDrone))
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnGraficas = New System.Windows.Forms.Button()
         Me.btnAnalizar = New System.Windows.Forms.Button()
@@ -36,7 +33,6 @@ Partial Class AgroDrone
         Me.btnCargarImages = New System.Windows.Forms.Button()
         Me.panelPrincipal = New System.Windows.Forms.Panel()
         Me.pGraficas = New System.Windows.Forms.Panel()
-        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.pAnalizar = New System.Windows.Forms.Panel()
         Me.btnObtenerDatos = New System.Windows.Forms.Button()
         Me.pbCollage = New System.Windows.Forms.PictureBox()
@@ -49,17 +45,26 @@ Partial Class AgroDrone
         Me.lblProcesos = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.pbInfectados = New System.Windows.Forms.PictureBox()
+        Me.pbHidratacion = New System.Windows.Forms.PictureBox()
+        Me.pAnalisis1 = New System.Windows.Forms.Panel()
+        Me.pAnalisis2 = New System.Windows.Forms.Panel()
+        Me.lblInfectados = New System.Windows.Forms.Label()
+        Me.lblHidratacion = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelPrincipal.SuspendLayout()
         Me.pGraficas.SuspendLayout()
-        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pAnalizar.SuspendLayout()
         CType(Me.pbCollage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pMapa.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        CType(Me.pbInfectados, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbHidratacion, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pAnalisis1.SuspendLayout()
+        Me.pAnalisis2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -85,11 +90,11 @@ Partial Class AgroDrone
         Me.btnGraficas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGraficas.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGraficas.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnGraficas.Location = New System.Drawing.Point(287, -4)
+        Me.btnGraficas.Location = New System.Drawing.Point(352, -4)
         Me.btnGraficas.Name = "btnGraficas"
-        Me.btnGraficas.Size = New System.Drawing.Size(77, 75)
+        Me.btnGraficas.Size = New System.Drawing.Size(110, 75)
         Me.btnGraficas.TabIndex = 5
-        Me.btnGraficas.Text = "Gráficas"
+        Me.btnGraficas.Text = "Análisis"
         Me.btnGraficas.UseVisualStyleBackColor = False
         '
         'btnAnalizar
@@ -102,11 +107,11 @@ Partial Class AgroDrone
         Me.btnAnalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAnalizar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAnalizar.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnAnalizar.Location = New System.Drawing.Point(210, -4)
+        Me.btnAnalizar.Location = New System.Drawing.Point(243, -4)
         Me.btnAnalizar.Name = "btnAnalizar"
-        Me.btnAnalizar.Size = New System.Drawing.Size(77, 75)
+        Me.btnAnalizar.Size = New System.Drawing.Size(110, 75)
         Me.btnAnalizar.TabIndex = 4
-        Me.btnAnalizar.Text = "Analizar"
+        Me.btnAnalizar.Text = "Modelo 2D"
         Me.btnAnalizar.UseVisualStyleBackColor = False
         '
         'btnMapa
@@ -121,9 +126,9 @@ Partial Class AgroDrone
         Me.btnMapa.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnMapa.Location = New System.Drawing.Point(134, -4)
         Me.btnMapa.Name = "btnMapa"
-        Me.btnMapa.Size = New System.Drawing.Size(77, 75)
+        Me.btnMapa.Size = New System.Drawing.Size(110, 75)
         Me.btnMapa.TabIndex = 3
-        Me.btnMapa.Text = "Mapa"
+        Me.btnMapa.Text = "Geolocalización"
         Me.btnMapa.UseVisualStyleBackColor = False
         '
         'PictureBox2
@@ -190,31 +195,13 @@ Partial Class AgroDrone
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pGraficas.BackColor = System.Drawing.Color.Transparent
-        Me.pGraficas.Controls.Add(Me.Chart1)
+        Me.pGraficas.Controls.Add(Me.pAnalisis2)
+        Me.pGraficas.Controls.Add(Me.pAnalisis1)
         Me.pGraficas.Location = New System.Drawing.Point(7, 3)
         Me.pGraficas.Name = "pGraficas"
-        Me.pGraficas.Size = New System.Drawing.Size(147, 337)
+        Me.pGraficas.Size = New System.Drawing.Size(399, 268)
         Me.pGraficas.TabIndex = 6
         Me.pGraficas.Visible = False
-        '
-        'Chart1
-        '
-        Me.Chart1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        ChartArea1.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend1)
-        Me.Chart1.Location = New System.Drawing.Point(19, 10)
-        Me.Chart1.Name = "Chart1"
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Me.Chart1.Series.Add(Series1)
-        Me.Chart1.Size = New System.Drawing.Size(105, 311)
-        Me.Chart1.TabIndex = 0
-        Me.Chart1.Text = "Chart1"
         '
         'pAnalizar
         '
@@ -249,6 +236,7 @@ Partial Class AgroDrone
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pbCollage.BackgroundImage = CType(resources.GetObject("pbCollage.BackgroundImage"), System.Drawing.Image)
         Me.pbCollage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbCollage.Image = CType(resources.GetObject("pbCollage.Image"), System.Drawing.Image)
         Me.pbCollage.Location = New System.Drawing.Point(92, 10)
         Me.pbCollage.Name = "pbCollage"
         Me.pbCollage.Size = New System.Drawing.Size(79, 274)
@@ -367,6 +355,74 @@ Partial Class AgroDrone
         Me.Panel5.Size = New System.Drawing.Size(839, 34)
         Me.Panel5.TabIndex = 6
         '
+        'pbInfectados
+        '
+        Me.pbInfectados.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pbInfectados.Image = CType(resources.GetObject("pbInfectados.Image"), System.Drawing.Image)
+        Me.pbInfectados.Location = New System.Drawing.Point(10, 35)
+        Me.pbInfectados.Name = "pbInfectados"
+        Me.pbInfectados.Size = New System.Drawing.Size(150, 80)
+        Me.pbInfectados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbInfectados.TabIndex = 0
+        Me.pbInfectados.TabStop = False
+        '
+        'pbHidratacion
+        '
+        Me.pbHidratacion.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pbHidratacion.Image = CType(resources.GetObject("pbHidratacion.Image"), System.Drawing.Image)
+        Me.pbHidratacion.Location = New System.Drawing.Point(35, 35)
+        Me.pbHidratacion.Name = "pbHidratacion"
+        Me.pbHidratacion.Size = New System.Drawing.Size(150, 80)
+        Me.pbHidratacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbHidratacion.TabIndex = 1
+        Me.pbHidratacion.TabStop = False
+        '
+        'pAnalisis1
+        '
+        Me.pAnalisis1.Controls.Add(Me.lblInfectados)
+        Me.pAnalisis1.Controls.Add(Me.pbInfectados)
+        Me.pAnalisis1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.pAnalisis1.Location = New System.Drawing.Point(0, 0)
+        Me.pAnalisis1.Name = "pAnalisis1"
+        Me.pAnalisis1.Size = New System.Drawing.Size(195, 268)
+        Me.pAnalisis1.TabIndex = 2
+        '
+        'pAnalisis2
+        '
+        Me.pAnalisis2.Controls.Add(Me.lblHidratacion)
+        Me.pAnalisis2.Controls.Add(Me.pbHidratacion)
+        Me.pAnalisis2.Dock = System.Windows.Forms.DockStyle.Right
+        Me.pAnalisis2.Location = New System.Drawing.Point(204, 0)
+        Me.pAnalisis2.Name = "pAnalisis2"
+        Me.pAnalisis2.Size = New System.Drawing.Size(195, 268)
+        Me.pAnalisis2.TabIndex = 3
+        '
+        'lblInfectados
+        '
+        Me.lblInfectados.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lblInfectados.AutoSize = True
+        Me.lblInfectados.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInfectados.Location = New System.Drawing.Point(7, 141)
+        Me.lblInfectados.Name = "lblInfectados"
+        Me.lblInfectados.Size = New System.Drawing.Size(149, 15)
+        Me.lblInfectados.TabIndex = 2
+        Me.lblInfectados.Text = "Árboles infectados: 35"
+        '
+        'lblHidratacion
+        '
+        Me.lblHidratacion.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lblHidratacion.AutoSize = True
+        Me.lblHidratacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHidratacion.Location = New System.Drawing.Point(32, 141)
+        Me.lblHidratacion.Name = "lblHidratacion"
+        Me.lblHidratacion.Size = New System.Drawing.Size(173, 15)
+        Me.lblHidratacion.TabIndex = 3
+        Me.lblHidratacion.Text = "Nivel de Hidratación: 80%"
+        '
         'AgroDrone
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -382,6 +438,7 @@ Partial Class AgroDrone
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.DoubleBuffered = True
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "AgroDrone"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AgroDrone"
@@ -393,7 +450,6 @@ Partial Class AgroDrone
         Me.panelPrincipal.ResumeLayout(False)
         Me.panelPrincipal.PerformLayout()
         Me.pGraficas.ResumeLayout(False)
-        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pAnalizar.ResumeLayout(False)
         Me.pAnalizar.PerformLayout()
         CType(Me.pbCollage, System.ComponentModel.ISupportInitialize).EndInit()
@@ -401,6 +457,12 @@ Partial Class AgroDrone
         Me.pMapa.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        CType(Me.pbInfectados, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbHidratacion, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pAnalisis1.ResumeLayout(False)
+        Me.pAnalisis1.PerformLayout()
+        Me.pAnalisis2.ResumeLayout(False)
+        Me.pAnalisis2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -426,5 +488,10 @@ Partial Class AgroDrone
     Friend WithEvents pbCollage As System.Windows.Forms.PictureBox
     Friend WithEvents btnObtenerDatos As System.Windows.Forms.Button
     Friend WithEvents pGraficas As System.Windows.Forms.Panel
-    Friend WithEvents Chart1 As System.Windows.Forms.DataVisualization.Charting.Chart
+    Friend WithEvents pAnalisis2 As System.Windows.Forms.Panel
+    Friend WithEvents pbHidratacion As System.Windows.Forms.PictureBox
+    Friend WithEvents pAnalisis1 As System.Windows.Forms.Panel
+    Friend WithEvents pbInfectados As System.Windows.Forms.PictureBox
+    Friend WithEvents lblHidratacion As System.Windows.Forms.Label
+    Friend WithEvents lblInfectados As System.Windows.Forms.Label
 End Class

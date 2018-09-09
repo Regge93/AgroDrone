@@ -85,6 +85,7 @@ Partial Class TablaImages
         Me.Controls.Add(Me.btnContinuar)
         Me.Controls.Add(Me.tbl_images)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "TablaImages"

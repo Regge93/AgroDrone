@@ -199,4 +199,14 @@ Public Class AgroDrone
 
         btnCargarImages.Location = New Point(x, y)
     End Sub
+
+    Private Sub Acomodar()
+        Dim width As Integer = (pGraficas.Width / 2) - 5
+        pAnalisis1.Width = width
+        pAnalisis2.Width = width
+    End Sub
+
+    Private Sub pGraficas_Resize(sender As Object, e As EventArgs) Handles pGraficas.Resize
+        Acomodar()
+    End Sub
 End Class

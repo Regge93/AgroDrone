@@ -45,6 +45,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>src\logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="GMap.NET.Core">
       <HintPath>GMaps\GMap.NET.Core.dll</HintPath>
@@ -153,17 +156,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="src\30%25.png" />
-    <Content Include="src\50%25.png" />
-    <Content Include="src\60%25.png" />
     <Content Include="src\banner_down.png" />
     <Content Include="src\banner_up.png" />
-    <Content Include="src\DJI_0072.JPG" />
+    <Content Include="src\dañada.jpg" />
     <Content Include="src\fondo_blanco.png" />
     <Content Include="src\logo-tec.png" />
+    <Content Include="src\logo.ico" />
     <Content Include="src\logo.png" />
     <Content Include="src\maxresdefault.png" />
-    <Content Include="src\Sin título-2.jpg" />
+    <Content Include="src\norm.jpg" />
+    <Content Include="src\spectral.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
